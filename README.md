@@ -27,66 +27,66 @@
 MYPCPARTS está diseñada para proporcionar a los usuarios estimaciones de precios para piezas de computadoras, basadas en reportes generados por la comunidad de usuarios registrados. Los usuarios pueden enviar reportes sobre los precios y la ubicacion de componentes de hardware, contribuyendo así a una base de datos compartida.
 
 ## Endpoints API
-# Registro de Usuario:
+Registro de Usuario:
 Método: POST
 Endpoint: /auth/signup
 
-# Inicio de Sesión:
+Inicio de Sesión:
 Método: POST
 Endpoint: /auth/signin
 
-# Enviar Reporte:
+Enviar Reporte:
 Método: POST
 Endpoint: /reports
 
-# Registro de Usuario:
+Registro de Usuario:
 Método: POST
 Endpoint: /auth/signup
 Cuerpo de Solicitud:
 {
-    "email": "user@signUp.com",
+    "email": "user@mypcparts.com",
     "password": "user123"
 }
 
-# Inicio de Sesión:
+Inicio de Sesión:
 Método: POST
 Endpoint: /auth/signin
 Cuerpo de Solicitud:
 {
-    "email": "asf@signUp.com",
+    "email": "user@mypcparts.com",
     "password": "sjdfsgsg"
 }
 
-# Cerrar Sesión:
+Cerrar Sesión:
 Método: POST
 Endpoint: /auth/signout
 Cuerpo de Solicitud:
 {
-    "email": "asf@signUp.com",
+    "email": "user@mypcparts.com",
     "password": "sjdfsgsg"
 }
 
-# Obtener Usuario por ID:
+Obtener Usuario por ID:
 Método: GET
 Endpoint: /auth/:userId
 
-# Obtener Usuario por Email:
+Obtener Usuario por Email:
 Método: GET
-Endpoint: /auth?email=asf@asf.com
+Endpoint: /auth?email=user@mypcparts.com
 
-# Eliminar Usuario por ID:
+Eliminar Usuario por ID:
 Método: DELETE
 Endpoint: /auth/:userId
 
-# Actualizar Usuario:
+Actualizar Usuario:
 Método: PATCH
 Endpoint: /auth/:userId
 Cuerpo de Solicitud:
 {
-    "email": "aaaaaaaa@asf.com"
+    "email": "user@mypcparts.com"
 }
 
-# Enviar Reporte:
+Enviar Reporte:
 Método: POST
 Endpoint: /reports
 Cuerpo de Solicitud:
@@ -99,7 +99,7 @@ Cuerpo de Solicitud:
     "price": 70
 }
 
-# Aprobar Informe:
+Aprobar Informe:
 Método: PATCH
 Endpoint: /reports/:reportId
 Cuerpo de Solicitud:
@@ -107,7 +107,7 @@ Cuerpo de Solicitud:
     "approved": true
 }
 
-# Estimación de Parte:
+Estimación de Parte:
 Método: GET
 Endpoint: /reports?type=Procesador&make=Intel&model=12400k&lng=50&lat=90
 
