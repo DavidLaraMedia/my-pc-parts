@@ -24,7 +24,94 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+MYPCPARTS está diseñada para proporcionar a los usuarios estimaciones de precios para piezas de computadoras, basadas en reportes generados por la comunidad de usuarios registrados. Los usuarios pueden enviar reportes sobre los precios y la ubicacion de componentes de hardware, contribuyendo así a una base de datos compartida.
+
+## Endpoints API
+Registro de Usuario:
+Método: POST
+Endpoint: /auth/signup
+
+Inicio de Sesión:
+Método: POST
+Endpoint: /auth/signin
+
+Enviar Reporte:
+Método: POST
+Endpoint: /reports
+
+
+Registro de Usuario:
+Método: POST
+Endpoint: /auth/signup
+Cuerpo de Solicitud:
+{
+    "email": "user@signUp.com",
+    "password": "user123"
+}
+
+Inicio de Sesión:
+Método: POST
+Endpoint: /auth/signin
+Cuerpo de Solicitud:
+{
+    "email": "asf@signUp.com",
+    "password": "sjdfsgsg"
+}
+
+Cerrar Sesión:
+Método: POST
+Endpoint: /auth/signout
+Cuerpo de Solicitud:
+{
+    "email": "asf@signUp.com",
+    "password": "sjdfsgsg"
+}
+
+Obtener Usuario por ID:
+Método: GET
+Endpoint: /auth/:userId
+
+Obtener Usuario por Email:
+Método: GET
+Endpoint: /auth?email=asf@asf.com
+
+Eliminar Usuario por ID:
+Método: DELETE
+Endpoint: /auth/:userId
+
+Actualizar Usuario:
+Método: PATCH
+Endpoint: /auth/:userId
+Cuerpo de Solicitud:
+{
+    "email": "aaaaaaaa@asf.com"
+}
+
+Enviar Reporte:
+Método: POST
+Endpoint: /reports
+Cuerpo de Solicitud:
+{
+    "type": "Procesador",
+    "make": "Intel",
+    "model": "12400k",
+    "lng": 50,
+    "lat": 90,
+    "price": 70
+}
+
+Aprobar Informe:
+Método: PATCH
+Endpoint: /reports/:reportId
+Cuerpo de Solicitud:
+{
+    "approved": true
+}
+
+Estimación de Parte:
+Método: GET
+Endpoint: /reports?type=Procesador&make=Intel&model=12400k&lng=50&lat=90
+
 
 ## Installation
 
